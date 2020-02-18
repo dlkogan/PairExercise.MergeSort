@@ -21,10 +21,15 @@ describe('Merge function', function(){
   it('is able to merge two sorted arrays into one sorted array', function(){
     expect(merge([1], [2])).toEqual([1,2])
   });
-  it('is able to merge two arrays of different sizes', function() {
-    expect(merge(arrOne, arrTwo)).toEqual([1,2,3,4,7,8,9])
+  it('is able to merge two arrays of different sizes where larger one is first', function() {
+    expect(merge(arrTwo, arrOne)).toEqual([1,2,3,4,7,8,9])
   })
 });
 describe('MergeSort Array function', function() {
-  it('')
+  it('works w/ the simplest example', function() {
+    expect(mergeSort([2,1])).toEqual([1,2])
+  })
+  it('Take in an even array and sort it', function() {
+    expect(mergeSort(testArr)).toEqual([1,2,3,4,5,7,8,9])
+  })
 });
